@@ -49,9 +49,10 @@ class DocxToPdf:
             files = {'file': open(self.file_path + self.file_name_docx, 'rb'),}
             # files = {'file': '(None, ' + open(self.file_path + self.file_name_docx, 'rb') + ')'}
             print(f"REQUEST: {self.base_url}  params={params}, headers={headers}")
-            response = requests.post(self.base_url, params=params, headers=headers, files=files)
-            print(f"RESPONSE_CODE: {response.status_code}")
-            return response.json()
+            # response = requests.post(self.base_url, params=params, headers=headers, files=files)
+            # print(f"RESPONSE_CODE: {response.status_code}")
+        #     return response.json()
+            return 0
         except:
             return 1
             # return "Error while calling \"APYHUB\" API: {response.status_code}"
